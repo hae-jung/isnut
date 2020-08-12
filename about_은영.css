@@ -1,0 +1,315 @@
+/*색 #CFDAFF #5874FF #233487*/
+@font-face {
+font-family: 'SDKukdetopokki-bDb';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'SDKukdetopokki-Lt';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MapoFlowerIsland';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Chosunilbo_myungjo';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'NEXON Lv2 Gothic Bold';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'NEXON Lv1 Gothic OTF';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'IBMPlexSansKR-Light';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'GmarketSansLight';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+/* menu */
+nav{
+  border-bottom: 1px solid #233487;
+}
+.menu ul{
+  list-style-type: none;
+  margin-top: 20px;
+  padding-left: 0;
+  overflow: hidden;
+}
+.menu li {
+  float: left;
+}
+.menu_list{
+  color: black;
+  padding-left: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.menu_title{
+  font-family: 'SDKukdetopokki-bDb';
+  font-size: 60px;
+  color: red;
+  padding: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* introduction */
+.title{
+  font-size: 100px;
+  text-align: center;
+  font-family: 'SDKukdetopokki-bDb';
+  margin-left: 30%;
+  margin-right: 30%;
+  background-image: url("");
+  background-size: cover;
+	background-repeat: no-repeat;
+
+}
+#category{
+  display:grid;
+  grid-template-columns: 0.7fr 0.3fr 3fr;
+}
+.slider h2{
+  font-family: 'NEXON Lv1 Gothic OTF';
+  font-size: 80px;
+  padding:10px 30px 0px 50px;
+}
+.slider img{
+  width: 50px;
+  height: 50px;
+  margin-top: 95px;
+}
+.slider{
+  position:relative;
+  width:100%;
+  background:#fff;
+  z-index:96;}
+.slider_info{
+  max-width:1440px;
+  margin:0 auto;
+  background:#fff;
+  }
+.slider_info p:first-child{
+  padding:62px 30px 0px 50px;
+  font-size:32px;
+  line-height:1.25;
+}
+.slider_info p:first-child + p{
+  font-family: 'Chosunilbo_myungjo';
+  padding:0px 30px 0px 50px;
+  color:#9e9e9e;
+  font-size:1.1em;
+  line-height:1.25;
+}
+.font-en{
+  font-family: sans-serif;
+  margin: 0px;
+}
+#introduction-pic{
+  width: 100%;
+}
+
+/* section title */
+.text h2{
+  font-family: 'GmarketSansLight';
+  position: relative;
+  font-size: 45px;
+  text-align: center;
+  font-style: normal;
+  padding:0px 40px 25px 40px;
+}
+.text h2::after{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 1px;
+  width: 80px;
+  margin-left: -40px;
+  background-color: #000;
+  content:'';
+}
+
+/* activity */
+.activity_container{
+  width: 1000px;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.file1, .file2, .file3, .file4{
+  position: relative;
+  display: block;
+}
+
+#plan{
+  position: absolute;
+  top: 90px;
+  left: 0;
+  z-index: 4
+}
+#film{
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  z-index: 3;
+}
+#edit{
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  z-index: 2;
+}
+#play{
+  position: absolute;
+  top: 0px;
+  left: 90px;
+  z-index: 1;
+}
+
+.plan-img, .film-img, .edit-img, .play-img{
+  position: absolute;
+  margin: 0 0 0 0;
+  z-index:1;
+}
+.plan-text, .film-text, .edit-text, .play-text{
+  position: relative;
+  font-size: 50px;
+  z-index: 2;
+  margin: 0 0 0 0;
+}
+.plan-text{
+  position: relative;
+  top: 0px;
+  left: 60px;
+}
+.film-text{
+  position: relative;
+  top: 0px;
+  left: 290px;
+}
+.edit-text{
+  position: relative;
+  top: 0px;
+  left: 510px;
+}
+.play-text{
+  position: relative;
+  top: 0px;
+  left: 730px;
+}
+
+.file1:hover #plan{transform: translateY(-40px);}
+.file2:hover #film{transform: translateY(-40px);}
+.file3:hover #edit{transform: translateY(-40px);}
+.file4:hover #play{transform: translateY(-40px);}
+
+#plan{transform: translateY(0px); transition: all 0.8s ease;}
+#film{transform: translateY(0px); transition: all 0.8s ease;}
+#edit{transform: translateY(0px); transition: all 0.8s ease;}
+#play{transform: translateY(0px); transition: all 0.8s ease;}
+
+
+/* history */
+.history_container{
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.timeline{
+  list-style-type: none;
+  position: relative;
+  width: 10px;
+  height: 500px;
+  margin:0 auto;
+  padding-top: 50px;
+  background: linear-gradient( to bottom,  #CFDAFF, #5874FF, #233487, #000000 );
+  border-radius: 15px;
+}
+.up-on-scroll-1{
+  position: relative;
+  background: #CFDAFF;
+  border-radius: 10px;
+  width: 200px;
+  padding: 15px;
+  transition: transform 0.7s, opacity 1s;
+}
+.up-on-scroll-2{
+  position: relative;
+  background: #CFDAFF;
+  border-radius: 10px;
+  width: 200px;
+  padding: 15px;
+  transition: transform 0.7s, opacity 1s;
+  left:-255px;
+}
+.timeline time{
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.timeline li{
+  content: '';
+  position: relative;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  left: 2.5px;
+}
+.timeline ul{
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+}
+
+/* footer */
+#footer{
+  margin-top: 70px;
+  border-top: 1px solid gray;
+  background-color: #f0f0f0;
+  font-family: 'NEXON Lv1 Gothic OTF';
+}
+#footer .list-line{
+  font-size: 18px;
+  list-style-type: none;
+  text-align: center;
+  margin: 40px;
+}
+#footer .isnut-sns{
+  list-style-type: none;
+  text-align: right;
+}
+#footer .isnut-sns li{
+  display: inline;
+}

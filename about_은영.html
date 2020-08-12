@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> ISNUT | ABOUT </title>
+  <link rel="stylesheet" href="about.css" type="text/css">
+  <meta name="keywords" contents="영상, 영상제작, 동아리, 이즈넛, ISNUT, isnut"/>
+  <meta name="description" content="ISNUT in SEOUL NATIONAL UNIVERSITY OF SCIENCE AND TECHNOLOGY"/>
+  <meta name="copyright" content="JIWON ENYOUNG HAEJUNG"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta http-equiv="refresh" content="30"/>
+  <script>
+      function fn_zIndex(value){
+      var layer1 = document.getElementById("plan");
+      var layer2 = document.getElementById("film");
+      var layer3 = document.getElementById("edit");
+      var layer4 = document.getElementById("play");
+      switch(value){
+        case 0:
+        layer1.style.zIndex="4"; layer1.style.top = "90px"; layer1.style.left = "0px";
+        layer2.style.zIndex="3"; layer2.style.top = "60px"; layer2.style.left = "30px";
+        layer3.style.zIndex="2"; layer3.style.top = "30px"; layer3.style.left = "60px";
+        layer4.style.zIndex="1"; layer4.style.top = "0px"; layer4.style.left = "90px";
+        break;
+        case 1:
+        layer1.style.zIndex="1"; layer1.style.top = "0px"; layer1.style.left = "90px";
+        layer2.style.zIndex="4"; layer2.style.top = "90px"; layer2.style.left = "0px";
+        layer3.style.zIndex="3"; layer3.style.top = "60px"; layer3.style.left = "30px";
+        layer4.style.zIndex="2"; layer4.style.top = "30px"; layer4.style.left = "60px";
+        break;
+        case 2:
+        layer1.style.zIndex="2"; layer1.style.top = "30px"; layer1.style.left = "60px";
+        layer2.style.zIndex="1"; layer2.style.top = "0px"; layer2.style.left = "90px";
+        layer3.style.zIndex="4"; layer3.style.top = "90px"; layer3.style.left = "0px";
+        layer4.style.zIndex="3"; layer4.style.top = "60px"; layer4.style.left = "30px";
+        break;
+        case 3:
+        layer1.style.zIndex="3"; layer1.style.top = "60px"; layer1.style.left = "30px";
+        layer2.style.zIndex="2"; layer2.style.top = "30px"; layer2.style.left = "60px";
+        layer3.style.zIndex="1"; layer3.style.top = "0px"; layer3.style.left = "90px";
+        layer4.style.zIndex="4"; layer4.style.top = "90px"; layer4.style.left = "0px";
+        break;
+      }
+    } //버튼 동작
+    function isElementUnderBottom(elem, triggerDiff){ //element가 스크린 아래쪽에 있는지 검사. 아래에 있으면 true
+      const{top} = elem.getBoundingClientRect();
+      const{innerHeight} = window;
+      return top>innerHeight + (triggerDiff || 0);
+    }
+    function handleScroll(){  //스크롤이 발생하면 실행. element가 화면보다 아래에 있으면 opacity:0 적용/화면 안에 있으면 opacity:1
+      const elems = document.querySelectorAll('.timeline');
+      elems.forEach(elem => {
+        if(isElementUnderBottom(elem, -20)){
+          elem.style.opacity = "0";
+        } else{
+          elem.style.opacity = "1";
+        }
+      })
+    }   //스크롤 동작
+    window.addEventListener('scroll', handleScroll);
+  </script>
+</head>
+<body>
+  <nav class="menu" style = "padding: 3%">
+    <div><a href="../main/main.html" class="menu_title">ISNUT</a></div>
+    <ul>
+      <li><a href="about.html" class="menu_list">ABOUT</a></li>
+      <li><a href="../work/work.html" class="menu_list">WORK</a></li>
+      <li><a href="../" class="menu_list">NEWS</a></li>
+      <li><a href="../people/people.html" class="menu_list">PEOPLE</a></li>
+  </nav>
+
+  <h1 class = title>ABOUT</h1>
+
+  <div class="introduction" style = "margin: 2%;">
+    <section class="slider" id="category">
+      <span>
+        <h2>ISNUT</h2>
+      </span>
+      <span>
+        <img src="PngItem_2318311.png">
+      </span>
+      <span>
+    		<div class="slider_info">
+    			<p class="font-en">
+            Music of Antenna embodies each artists' lifestyle. We discover the value of music with different artists and their lifestyle.
+          </p>
+    			<p>안테나 음악에는 아티스트들의 라이프스타일이 담겨있습니다. 그들의 각기 다른 모습을 통해 안테나 음악의 가치를 발견합니다.</p>
+    		</div>
+      </span>
+  	</section>
+    <img id="introduction-pic" src="isnut_all.jpg" alt="이즈넛 단체사진">
+  </div>
+
+  <div class="content">
+    <section class="activity" style = "margin: 2%;  margin-top: 8%">
+        <div class="text">
+          <h2>Activity</h2>
+        </div>
+        <div class="activity_container">
+          <div class="file1">
+            <div id="plan">
+              <div class="plan-img">
+                <img src="about1.png" width="900px" height="auto"/>
+              </div>
+              <div class="plan-text">
+                <input type="button" value="plan" onclick="fn_zIndex(0);" style="color: white; font-size: 50px; border: none; background: transparent;">
+              </div>
+            </div>
+          </div>
+          <div class="file2">
+            <div id="film">
+              <div class="film-img">
+                <img src="about2.png" width="900px" height="auto"/>
+              </div>
+              <div class="film-text">
+                <input type="button" value="film" onclick="fn_zIndex(1);" style="color: white; font-size: 50px; border: none; background: transparent;">
+              </div>
+            </div>
+          </div>
+          <div class="file3">
+            <div id="edit">
+              <div class="edit-img">
+                <img src="about3.png" width="900px" height="auto"/>
+              </div>
+              <div class="edit-text">
+                <input type="button" value="edit" onclick="fn_zIndex(2);" style="color: white; font-size: 50px; border: none; background: transparent;">
+              </div>
+            </div>
+          </div>
+          <div class="file4">
+            <div id="play">
+              <div class="play-img">
+                <img src="about4.png" width="900px" height="auto"/>
+              </div>
+              <div class="play-text">
+                <input type="button" value="play" onclick="fn_zIndex(3);" style="color: white; font-size: 50px; border: none; background: transparent;">
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="promotional_videos" style = "padding: 2%; margin-top: 8%; background-color: #f0f0f0;">
+      <div class="text">
+        <h2>홍보 영상</h2>
+      </div>
+    </section>
+    <section class="BI" style = "margin: 2%; margin-top: 8%">
+      <div class="text">
+        <h2>BI 소개</h2>
+      </div>
+    </section>
+    <section class="history" style = "margin: 2%; margin-top: 8%">
+        <div class="text">
+          <h2>History</h2>
+        </div>
+        <div class="history_container">
+          <div class="timeline">
+            <ul>
+              <li>
+                <div class="up-on-scroll-1">
+                  <time>2000?</time>ISNUT 창립
+                </div>
+              </li>
+              <li>
+                <div class="up-on-scroll-2">
+                  <time>2002</time>ISNUT 네이트 클럽 개설
+                </div>
+              </li>
+              <li>
+                <div class="up-on-scroll-1">
+                  <time>2014</time>ISNUT 네이버 카페 개설
+                </div>
+              </li>
+              <li>
+                <div class="up-on-scroll-2">
+                  <time>2020</time>ISNUT 포트폴리오 페이지 <br> 개설
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+  </div>
+
+  <!-- <section class="style-module--wrap--1dG-1">
+    <div class="container-md">
+      <ul class="style-module--timeline--3x-NL">
+        <li class="style-module--item--2yBvL">
+          <div class="style-module--itemWrap--36cAf">
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2014/08</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">뱅크샐러드 웹 서비스 런칭</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">6명이 의기투합, 첫 프로젝트인<br>뱅크샐러드 웹서비스 런칭✨</p>
+          </div>
+        </li>
+        <li class="style-module--item--2yBvL">
+          <div class="style-module--itemWrap--36cAf">
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2017/08</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">뱅크샐러드 리뉴얼 앱 런칭</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">두번의 실패를😭 교훈삼아<br>가계부 기능을 강화한 3.0 런칭</p>
+          </div>
+        </li>
+        <li class="style-module--item--2yBvL">
+          <div class="style-module--itemWrap--36cAf">
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2018/08</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">1년만에 누적다운로드 200만 달성</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">TV광고 없이 고객들의 입소문으로 🗣️<br>앱 출시 1년만에 200만 다운로드를 달성</p>
+          </div>
+        </li>
+        <li class="style-module--item--2yBvL">
+          <div class="style-module--itemWrap--36cAf">
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2019/04</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">API 워킹 그룹 주도</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">금융 분야 내 데이터 생태계 구축에<br>필수적인 데이터/기술 표준 및<br>규제 쟁점 논의에 주도적인 역할<br>소비자가 데이터 주인이 되는<br>마이데이터👥💾👥 시대 도입을 위한<br>비즈니스/규제적 기반 마련에 적극 기여</p>
+          </div>
+        </li>
+        <li class="style-module--item--2yBvL">
+          <div class="style-module--itemWrap--36cAf">
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2019/05</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">금융위원회 혁신금융서비스 지정</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">기존의 딱딱한 금융의 틀에서 탈피,<br>고객 중심의 다양한 서비스 모델을 구상.<br>껐다켰다할 수 있는 스위치보험🔄 출시</p>
+          </div>
+        </li>
+        <li class="style-module--item--2yBvL">
+          <div class="style-module--itemWrap--36cAf">
+            <div id="tada" class="style-module--tadaLayout--uWuTN sal-animate" data-sal="fade" data-sal-duration="0" data-sal-delay="0" data-sal-easing="ease">
+              <div id="tada" class="style-module--wrap--N9px6"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 140" width="250" height="140" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
+                  <defs><clipPath id="__lottie_element_2"><rect width="250" height="140" x="0" y="0"></rect></clipPath></defs>
+                  <g clip-path="url(#__lottie_element_2)">
+                    <g transform="matrix(1,0,0,1,84,23.094999313354492)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(255,217,0)" fill-opacity="1" d=" M0.6499999761581421,-4.5 C0.6499999761581421,-4.5 -0.6499999761581421,0.07999999821186066 -5,2.4600000381469727 C-5,2.4600000381469727 -0.7699999809265137,4.5 -0.7699999809265137,4.5 C-0.7699999809265137,4.5 3.680000066757202,2.7799999713897705 5,-3.0799999237060547 C5,-3.0799999237060547 0.6499999761581421,-4.5 0.6499999761581421,-4.5z">
+                    </path></g></g>
+                    <g transform="matrix(1,0,0,1,178.5,110.09500122070312)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(246,198,198)" fill-opacity="1" d=" M5.5,5.440000057220459 C5.5,5.440000057220459 0.6200000047683716,-1.2699999809265137 1.6799999475479126,-9.5 C1.6799999475479126,-9.5 -5.199999809265137,-6.260000228881836 -5.199999809265137,-6.260000228881836 C-5.199999809265137,-6.260000228881836 -7.239999771118164,1.3700000047683716 -0.6700000166893005,9.5 C-0.6700000166893005,9.5 5.5,5.440000057220459 5.5,5.440000057220459z">
+                    </path></g></g>
+                    <g transform="matrix(1,0,0,1,211,98.59500122070312)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(0,197,142)" fill-opacity="1" d=" M-0.9100000262260437,-7 C-0.9100000262260437,-7 0.9100000262260437,0.12999999523162842 7,3.8299999237060547 C7,3.8299999237060547 1.0700000524520874,7 1.0700000524520874,7 C1.0700000524520874,7 -5.150000095367432,4.329999923706055 -7,-4.789999961853027 C-7,-4.789999961853027 -0.9100000262260437,-7 -0.9100000262260437,-7z">
+                    </path></g></g>
+                    <g transform="matrix(1,0,0,1,43.74399948120117,62.33700180053711)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(255,217,0)" fill-opacity="1" d=" M-2.24399995803833,-6.624000072479248 C-2.24399995803833,-6.624000072479248 1.0160000324249268,-0.05400000140070915 7.745999813079834,2.2260000705718994 C7.745999813079834,2.2260000705718994 2.5959999561309814,6.625999927520752 2.5959999561309814,6.625999927520752 C2.5959999561309814,6.625999927520752 -4.044000148773193,5.375999927520752 -7.74399995803833,-3.124000072479248 C-7.74399995803833,-3.124000072479248 -2.24399995803833,-6.624000072479248 -2.24399995803833,-6.624000072479248z">
+                    </path></g></g>
+                    <g transform="matrix(1,0,0,1,175,16.094999313354492)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(0,197,142)" fill-opacity="1" d=" M-7,0.9200000166893005 C-7,0.9200000166893005 -3.890000104904175,-5 -3.890000104904175,-5 C-3.890000104904175,-5 4.769999980926514,0.029999999329447746 7,0.3199999928474426 C7,0.3199999928474426 5.309999942779541,5 5.309999942779541,5 C5.309999942779541,5 -1.5299999713897705,3.940000057220459 -7,0.9200000166893005">
+                    </path></g></g>
+                    <g transform="matrix(1,0,0,1,69,112.59500122070312)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(0,115,90)" fill-opacity="1" d=" M0.4699999988079071,7 C0.4699999988079071,7 -6,1.7400000095367432 -6,1.7400000095367432 C-6,1.7400000095367432 1.1699999570846558,-7 1.1699999570846558,-7 C1.1699999570846558,-7 6,-3.0799999237060547 6,-3.0799999237060547 C6,-3.0799999237060547 0.4699999988079071,7 0.4699999988079071,7z">
+                    </path></g></g>
+                    <g transform="matrix(1,0,0,1,21,105.09500122070312)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(62,103,241)" fill-opacity="1" d=" M-6,-1.6699999570846558 C-6,-1.6699999570846558 -3.509999990463257,-6.5 -3.509999990463257,-6.5 C-3.509999990463257,-6.5 5.809999942779541,-2.109999895095825 5.809999942779541,-2.109999895095825 C5.809999942779541,-2.109999895095825 6,6.5 6,6.5 C6,6.5 -6,-1.6699999570846558 -6,-1.6699999570846558z">
+                    </path></g></g>
+                    <g transform="matrix(1,0,0,1,230.00599670410156,45.64799880981445)" opacity="0.0001816333970683104" style="display: none;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                    <path fill="rgb(62,103,241)" fill-opacity="1" d=" M-3.739000082015991,-3.265000104904175 C-3.739000082015991,-3.265000104904175 -0.6790000200271606,-5.65500020980835 -0.6790000200271606,-5.65500020980835 C-0.6790000200271606,-5.65500020980835 3.740999937057495,-0.004999999888241291 3.740999937057495,-0.004999999888241291 C3.740999937057495,-0.004999999888241291 1.1510000228881836,5.65500020980835 1.1510000228881836,5.65500020C1.1510000228881836,5.65500020980835 -3.739000082015991,-3.265000104904175 -3.739000082015991,-3.265000104904175z">
+                    </path></g></g>
+                  </g>
+                </svg>
+            </div>
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2019/08</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">Series C 투자 유치</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">PFM 서비스를 넘어 데이터 회사로써의<br>본질적인 가치를 입증, 투자자로부터<br>450억 규모의 Series C 투자 유치</p>
+          </div>
+        </li>
+        <li class="style-module--item--2yBvL">
+          <div class="style-module--itemWrap--36cAf">
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2019/11</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">신용정보법 개정안 법안 소위 통과</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">뱅크샐러드가 그리는 마이데이터 사회<br>본격 진입을 위한 신호탄 🏁</p>
+          </div>
+        </li>
+        <li class="style-module--item--2yBvL">
+         <div class="style-module--itemWrap--36cAf">
+            <time class="style-module--time--19Vlc sal-animate" data-sal="slide-up" data-sal-delay="0" data-sal-easing="ease">2020/01</time>
+            <h1 class="style-module--title--2B9DL sal-animate" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">누적다운로드 600만 달성</h1>
+            <p class="style-module--content--3qA37 sal-animate" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">범국민서비스로 도약 🎉</p>
+         </div>
+        </li>
+      </ul>
+    </div>
+  </section> -->
+
+  <div id="footer" class="footer">
+    <div class="footer-area">
+        <ul class="isnut-sns">
+          <li><a href="https://www.facebook.com/snut.i.7/about" target="blank"> <img alt="facebook" src="fb.png" style="width:5%;"></a></li>
+          <li><a href="https://cafe.naver.com/isnut" target="blank"> <img alt="Naver" src="blog.png" style="width:5%;"></a></li>
+          <li><a href="http://isnut.cyworld.com" target="blank"> <img alt="Nate" src="nate.png" style="width:5%;"></a></li>
+          <li><a href="https://www.youtube.com/" target="blank"> <img alt="Youtube" src="youtube.png" style="width:5%;"></a></li>
+        </ul>
+        <ul class="list-line">
+          <li>E-mail : 국장/부국장 메일</li>
+          <li>@Site by JW EY HJ</li>
+          <br>
+        </ul>
+        <!-- <a href="#" class="page-top" style="display: block;">Top</a> -->
+    </div>
+  </div>
+
+</body>
+</html>
