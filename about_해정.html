@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> ISNUT </title>
+  <link rel="stylesheet" href="about_해정.css" type="text/css">
+  <meta name="keywords" contents="영상, 영상제작, 동아리, 이즈넛, ISNUT, isnut"/>
+  <meta name="description" content="ISNUT in SEOUL NATIONAL UNIVERSITY OF SCIENCE AND TECHNOLOGY"/>
+  <meta name="copyright" content="JIWON ENYOUNG HAEJUNG"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta http-equiv="refresh" content="30"/>
+  <!-- 여기 잘 모름 채워넣기
+  <meta name="viewport"/>
+  <meta name="robot"/>
+-->
+<!-- 카카오톡에 url 전송 시 나올 메시지
+<meta property="og:image" content="이미지"/>
+<meta property="og:url" content="유알엘"/>
+<meta property="og:description" content="디스크립션"/>
+<meta property="og:title" content="타이틀"/>
+-->
+</head>
+
+<body>
+  <!-- header -->
+  <!-- header END -->
+
+  <!-- main loading -->
+  <!-- main loading END -->
+
+  <!-- contents -->
+  <div class="top">
+    <h1>ABOUT</h1>
+    <img id="circle1" src="circle1.png" alt="about 원"/>
+    <hr class="line" noshade>
+  </div>
+  <div class="wrap">
+    <section class="introduction">
+      <div class="text">
+        <h2 id="intro-text">Isnut</h2>
+        <p>ISNUT은 ~ 단체입니다.
+          <br>서울과학기술대학교 전자IT미디어공학과에 ~합니다.</p>
+        </div>
+        <img id="intro-pic" src="isnut_all.jpg" alt="이즈넛 단체사진"/>
+      <!--<div>
+        <img id="fake" src="fake.png"/>
+      </div>-->
+    </section>
+    <section class="activity">
+        <div class="text">
+          <h2>Activity</h2>
+        </div>
+        <div class="container">
+          <ol class="indicator">
+            <li class="plan-button">
+              <input type="button" value="plan" onclick="" style="color: black; font-size: 20px; border: none; background: transparent;">
+            </li>
+            <li class="film-button">
+              <input type="button" value="film" onclick="" style="color: black; font-size: 20px; border: none; background: transparent;">
+            </li>
+            <li class="edit-button">
+              <input type="button" value="edit" onclick="" style="color: black; font-size: 20px; border: none; background: transparent;">
+            </li>
+            <li class="play-button">
+              <input type="button" value="play" onclick="" style="color: black; font-size: 20px; border: none; background: transparent;">
+            </li>
+          </ol>
+          <div class="content-wrap">
+            <div class="con1">
+              <p>ACTIVITY 01</p>
+              <h3>PLAN</h3>
+              <p class="desc"></p>
+            </div>
+              <div class="bg-img">
+                <img id="plan-img" src="111.png" alt="background"/>
+              </div>
+            <div class="con2">
+              <p>ACTIVITY 02</p>
+              <h3>FILM</h3>
+              <p class="desc"></p>
+            </div>
+            <div class="con3">
+              <p>ACTIVITY 03</p>
+              <h3>EDIT</h3>
+              <p class="desc"></p>
+            </div>
+            <div class="con4">
+              <p>ACTIVITY 04</p>
+              <h3>PLAY</h3>
+              <p class="desc"></p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="history">
+        <div class="text">
+          <h2>History</h2>
+        </div>
+        <!--연혁-->
+        <div>
+          <div class="bg">
+            <video autoplay muted loop class="gradient">
+              <source src="realgradient.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="timeline">
+            <ol>
+                <div>
+                  <li>
+                  <time>2000</time>ISNUT 창립
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2002</time>ISNUT 네이트 클럽 개설
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2014</time>ISNUT 네이버 카페 개설<br>위더스 활동 시작
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2016</time>'치노시오야 공모전' 수상
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2017</time>ISNUT 어워드 개최<br>'순둥이 공모전' 수상
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2018</time>'서울과학기술대학교 홍보 UCC' 최우수상 수상
+                </div>
+              </li>
+              <li>
+                <div>
+                  <time>2020</time>ISNUT 포트폴리오 페이지 <br>개설
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <!--연혁 END-->
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    //버튼 동작
+    function fn_zIndex(value){
+      var layer1 = document.getElementById("plan");
+      var layer2 = document.getElementById("film");
+      var layer3 = document.getElementById("edit");
+      var layer4 = document.getElementById("play");
+      switch(value){
+        case 0:
+        layer1.style.zIndex="4"; layer1.style.top = "90px"; layer1.style.left = "0px";
+        layer2.style.zIndex="3"; layer2.style.top = "60px"; layer2.style.left = "30px";
+        layer3.style.zIndex="2"; layer3.style.top = "30px"; layer3.style.left = "60px";
+        layer4.style.zIndex="1"; layer4.style.top = "0px"; layer4.style.left = "90px";
+        break;
+        case 1:
+        layer1.style.zIndex="1"; layer1.style.top = "0px"; layer1.style.left = "90px";
+        layer2.style.zIndex="4"; layer2.style.top = "90px"; layer2.style.left = "0px";
+        layer3.style.zIndex="3"; layer3.style.top = "60px"; layer3.style.left = "30px";
+        layer4.style.zIndex="2"; layer4.style.top = "30px"; layer4.style.left = "60px";
+        break;
+        case 2:
+        layer1.style.zIndex="2"; layer1.style.top = "30px"; layer1.style.left = "60px";
+        layer2.style.zIndex="1"; layer2.style.top = "0px"; layer2.style.left = "90px";
+        layer3.style.zIndex="4"; layer3.style.top = "90px"; layer3.style.left = "0px";
+        layer4.style.zIndex="3"; layer4.style.top = "60px"; layer4.style.left = "30px";
+        break;
+        case 3:
+        layer1.style.zIndex="3"; layer1.style.top = "60px"; layer1.style.left = "30px";
+        layer2.style.zIndex="2"; layer2.style.top = "30px"; layer2.style.left = "60px";
+        layer3.style.zIndex="1"; layer3.style.top = "0px"; layer3.style.left = "90px";
+        layer4.style.zIndex="4"; layer4.style.top = "90px"; layer4.style.left = "0px";
+        break;
+      }
+    }
+    //스크롤 동작
+    $(document).ready(function() {
+    $(window).scroll( function(){
+        $('h1, .text').each( function(i){
+
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > bottom_of_element ){
+              $(this).animate({'opacity':'1','top':'0px'},1000);
+            }
+
+        });
+    });
+    $(window).scroll( function(){
+        $('h1, .text, #circle1').each( function(i){
+
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > bottom_of_element ){
+              $('#circle1').animate({'opacity':'1','top':'-160px'},1000);
+            }
+
+        });
+    });
+    /*$(window).scroll( function(){
+        $('#fake').each( function(i){
+
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+            if( bottom_of_window > (bottom_of_element-320) ){
+                $(this).slideUp("slow");
+            }
+
+        });
+    });*/
+});
+
+
+/*
+    function isElementUnderBottom(elem, triggerDiff){ //element가 스크린 아래쪽에 있는지 검사. 아래에 있으면 true
+      const{top} = elem.getBoundingClientRect();
+      const{innerHeight} = window;
+      return top>innerHeight + (triggerDiff || 0);
+    }
+    function handleScroll(){  //스크롤이 발생하면 실행. element가 화면보다 아래에 있으면 opacity:0 적용/화면 안에 있으면 opacity:1
+      const elems = document.querySelectorAll('.timeline');
+      elems.forEach(elem => {
+        if(isElementUnderBottom(elem, -20)){
+          elem.style.opacity = "0";
+        } else{
+          elem.style.opacity = "1";
+        }
+      })
+    }
+    window.addEventListener('scroll', handleScroll);*/
+
+    </script>
+
+  </div>
+  <!-- contents END -->
+</body>
+</html>
