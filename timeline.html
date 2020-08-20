@@ -1,0 +1,92 @@
+<section class="history">
+        <div class="text">
+          <h2>History</h2>
+        </div>
+        <div>
+          <div class="bg">
+            <video autoplay muted loop class="gradient">
+              <source src="realgradient.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="timeline">
+              <ul>
+                <li>
+                  <div>
+                    <time>2000</time>ISNUT 창립
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <time>2002</time>ISNUT 네이트 클럽 개설
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <time>2014</time>ISNUT 네이버 카페 개설<br>위더스 활동 시작
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <time>2016</time>'치노시오야 공모전' 수상
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <time>2017</time>ISNUT 어워드 개최<br>'순둥이 공모전' 수상
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <time>2018</time>'서울과학기술대학교 홍보 UCC' 최우수상 수상
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <time>2020</time>ISNUT 포트폴리오 페이지 <br>개설
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <time style="font-size: 4rem;"><I>What's next?</I></time>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript">
+        (function() {
+          'use strict';
+
+          // define variables
+          var items = document.querySelectorAll(".timeline li");
+
+          // check if an element is in viewport
+          // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+          function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+          }
+
+          function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+              if (isElementInViewport(items[i])) {
+                items[i].classList.add("in-view");
+              }
+            }
+          }
+
+          // listen for events
+          window.addEventListener("load", callbackFunc);
+          window.addEventListener("resize", callbackFunc);
+          window.addEventListener("scroll", callbackFunc);
+
+        })();
+        </script>
