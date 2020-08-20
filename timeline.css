@@ -1,0 +1,176 @@
+/*history*/
+.bg{
+  position: relative;
+  width: 100%;
+  height: 1300px;
+  margin: 0 0 0 0;
+  overflow: hidden;
+}
+.gradient{
+  position: relative;
+  top: 20px;
+  align-items: center;
+  width: auto;
+  height: 1300px;
+  overflow: hidden;
+  margin: 0 0 15% 0;
+}
+/*-------------타임라인-------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  /* INTRO SECTION*/
+
+.container {  /*div 크기 조절 ... 왜있는지 모르겠슴*/
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {  /*가운데 선 모양 조절하는 것처럼 보이게 뒤에 div 조절*/
+  /*background: #456990;*/
+  padding: 50px 0;
+  position: relative;
+  top:-1300px;
+}
+
+.timeline ul li { /*가운데 선*/
+  list-style-type: none;
+  position: relative;
+  width: 3px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #CFDAFF;
+  border-radius: 50px;
+}
+
+.timeline ul li::after { /*동그라미*/
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 10px;/*20px*/
+  height: 10px;
+  border: 4px solid;
+  border-color: #CFDAFF;
+  background-color: #CFDAFF;
+  border-radius: 50%;
+}
+
+.timeline ul li div { /*글씨상자*/
+  position: relative;
+  top: 30px;
+  bottom: 0;
+  width: 500px;
+  padding: 15px;
+  background: #000;
+  border-radius: 10px;
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+}
+
+.timeline ul li div::before { /*왜 있는지 모르겠음*/
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {  /*오른쪽 글씨상자 위치*/
+  left: 15px;
+  text-align: left;
+}
+
+.timeline ul li:nth-child(odd) div::before {  /*오른쪽 글씨상자 작은 삼각형 생성. 뭔 점 투명하게 해줌*/
+  left: -16px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent;
+}
+
+.timeline ul li:nth-child(even) div { /*왼쪽 글씨상자 위치*/
+  left: -515px;
+  text-align: right;
+}
+
+.timeline ul li:nth-child(even) div::before { /*왼쪽 글씨상자 작은 삼각형이랑 뭔 점 투명하게 해줌*/
+  right: -16px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent;
+}
+.timeline ul li span{
+  background: linear-gradient(to right, #CFDAFF, #5874FF, #233487)
+}
+time {  /*연도 글씨*/
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #CFDAFF;
+  margin-bottom: 8px;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.timeline ul li div { /*생겨나는 상자 보이는거 조절*/
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {  /*오른쪽 상자 들어오게*/
+  transform: translate3d(0, 10px, 0);
+}
+
+.timeline ul li:nth-child(even) div { /*왼쪽 상자 들어오게*/
+  transform: translate3d(0, 10px, 0);
+}
+
+.timeline ul li.in-view div { /*상자들 보이는거*/
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -262px;
+    /*250+15-3*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 15px;
+    text-align: left;
+  }
+  .timeline ul li:nth-child(even) div::before {
+    left: -16px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+}
