@@ -2,237 +2,492 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="people.css" type="text/css">
+    <title>ISNUT | WORK</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <style>
-      h1 {
-        font-size: 70px;
-        text-align: center;
-        background-color: #CFDAFF;
-        margin-left: 30%;
-        margin-right: 30%;
-        border-radius: 50%;
-      }
-      .button_work{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 30px;
-      }
-      .button_work input{
-        margin: 10px;
-        padding-left: 15px;
-        padding-right: 15px;
-        font-size: 20px;
-        background-color: #FFFFFF;
-        border: 1px solid black;
-      }
-      .portfolio-content-block-body {
-	       padding-bottom: 10.625rem;
-      }
-      .portfolio-list ul {
-      	display: flex;
-      	flex-wrap: wrap;
-      	margin: -.75rem;
-      }
-      .portfolio-list ul li {
-      	flex: 0 1 25%;
-      	padding: .75rem;
-      	-webkit-box-sizing: border-box;
-      	-moz-box-sizing: border-box;
-      	box-sizing: border-box;
-      	-ms-flex-negative: 1;
-      	-ms-flex-preferred-size: calc(25% - 1.5rem);
-      }
-      .portfolio-list-item {
-      	position: relative;
-      }
-      .portfolio-list-item .portfolio-tb {
-      	position: relative;
-      	overflow: hidden;
-      }
-      .portfolio-list-item .portfolio-tb img {
-      	display: block;
-      	width: 100%;;
-      	-webkit-transition: all 250ms ease-out;
-      	-moz-transition: all 250ms ease-out;
-      	-ms-transition: all 250ms ease-out;
-      	-o-transition: all 250ms ease-out;
-      	transition: all 250ms ease-out;
-      }
-      .portfolio-list-item .portfolio-tb .over {
-      	background: rgba(70, 190, 190, .8);
-      	position: absolute;
-      	top: 0;
-      	left: 0;
-      	right: 0;
-      	bottom: 0;
-      	opacity: 0;
-      	-webkit-transition: all 250ms ease-out;
-      	-moz-transition: all 250ms ease-out;
-      	-ms-transition: all 250ms ease-out;
-      	-o-transition: all 250ms ease-out;
-      	transition: all 250ms ease-out;
-      }
-      .portfolio-list-item:hover .portfolio-tb img {
-      	-webkit-transform: scale(1.1);
-      	-moz-transform: scale(1.1);
-      	-ms-transform: scale(1.1);
-      	-o-transform: scale(1.1);
-      	transform: scale(1.1);
-      }
-      .portfolio-list-item:hover .portfolio-tb .over {
-      	opacity: 1;
-      }
-      .portfolio-list-item .portfolio-tb .over .label {
-      	display: block;
-      	position: absolute;
-      	top: 50%;
-      	left: 0;
-      	right: 0;
-      	text-align: center;
-      	color: #fff;
-      	letter-spacing: .2rem;
-      	font-size: 4rem;
-      	font-weight: 100;
-      	-webkit-transform: translateY(-50%);
-      	-moz-transform: translateY(-50%);
-      	-ms-transform: translateY(-50%);
-      	-o-transform: translateY(-50%);
-      	transform: translateY(-50%);
-      	text-indent: -999em;
-      	overflow: hidden;
+      @charset "UTF-8";
 
+      /*색 #CFDAFF #5874FF #233487*/
+      @font-face {
+      font-family: 'SDKukdetopokki-bDb';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
       }
-      .portfolio-list-item .portfolio-tb .over .label:before {
-      	width: 2px;
-      	background: #fff;
-      	height: 2.75rem;
-      	content:'';
-      	position: absolute;
-      	top: 50%;
-      	left: 50%;
-      	-webkit-transform: translate(-50%,-50%);
-      	-moz-transform: translate(-50%,-50%);
-      	-ms-transform: translate(-50%,-50%);
-      	-o-transform: translate(-50%,-50%);
-      	transform: translate(-50%,-50%);
+      @font-face {
+      font-family: 'SDKukdetopokki-Lt';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/SDKukdetopokki-aLt00.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
       }
-      .portfolio-list-item .portfolio-tb .over .label:after {
-      	height: 2px;
-      	background: #fff;
-      	width: 2.75rem;
-      	content:'';
-      	position: absolute;
-      	top: 50%;
-      	left: 50%;
-      	-webkit-transform: translate(-50%,-50%);
-      	-moz-transform: translate(-50%,-50%);
-      	-ms-transform: translate(-50%,-50%);
-      	-o-transform: translate(-50%,-50%);
-      	transform: translate(-50%,-50%);
+
+      @font-face {
+      font-family: 'MapoFlowerIsland';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
       }
-      .portfolio-list-item .portfolio-title {
-      	font-size: 1.125rem;
-      	font-weight: 800;
-      	padding: 1rem 0;
+      @font-face {
+      font-family: 'Chosunilbo_myungjo';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
       }
+      @font-face {
+      font-family: 'NEXON Lv2 Gothic Bold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+      @font-face {
+      font-family: 'NEXON Lv1 Gothic OTF';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+      @font-face {
+      font-family: 'IBMPlexSansKR-Light';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Light.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+      @font-face {
+      font-family: 'GmarketSansLight';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+      @font-face {
+      font-family: 'S-CoreDream-9Black';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+      @font-face {  /*당첨*/
+      font-family: 'NIXGONM-Vb';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONM-Vb.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+      @font-face {
+      font-family: 'GmarketSansBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+      @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
+
+      @font-face {
+      font-family: 'Arita-buri-SemiBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      }
+
+       html, body{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+       }
+
+      /* menu */
+       nav{
+        border-bottom: 1px solid #233487;
+       }
+       .menu ul{
+        list-style-type: none;
+        margin-top: 20px;
+        padding-left: 0;
+        overflow: hidden;
+       }
+       .menu li {
+        float: left;
+       }
+       .menu_list{
+        color: black;
+        padding-left: 16px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+       }
+       .menu_title{
+        font-family: 'SDKukdetopokki-bDb';
+        font-size: 60px;
+        color: red;
+        padding: 16px;
+        text-decoration: none;
+        font-weight: bold;
+       }
+
+      /* title */
+       .title{
+        font-size: 100px;
+        text-align: center;
+        font-family: 'SDKukdetopokki-bDb';
+        background-image: url("");
+        background-size:  cover;
+        background-repeat: no-repeat;
+       }
+
+        /* button */
+        .top_button{
+          text-align: center;
+        }
+        .top_button ul{
+          list-style-type: none;
+          padding: 0px;
+          margin: 5%;
+        }
+        .top_button li{
+          font-family: 'GmarketSansLight';
+          font-style: bold;
+          display: inline;
+          font-size: 30px;
+          margin: 2%;
+          border-bottom: 1px solid gray;
+        }
+        .top_button a{
+          color: black;
+          text-decoration: none;
+        }
+        .active_a{
+          border-bottom: 3px solid black;
+          font-family: 'GmarketSansBold';
+        }
+
+      /* portfolio */
+        .portfolio-content-block-body {
+           padding-bottom: 10.625rem;
+        }
+        .portfolio-list ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -.75rem;
+          list-style-type : none;
+        }
+        .portfolio-list ul li {
+          flex: 0 1 25%;
+          padding: .75rem;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -ms-flex-negative: 1;
+          -ms-flex-preferred-size: calc(25% - 1.5rem);
+        }
+        .portfolio-list a{
+          text-decoration: none;
+        }
+        .portfolio-list-item {
+          position: relative;
+        }
+        .portfolio-list-item .portfolio-tb {
+          position: relative;
+          overflow: hidden;
+        }
+        .portfolio-list-item .portfolio-tb img {
+          display: block;
+          width: 100%;;
+          -webkit-transition: all 250ms ease-out;
+          -moz-transition: all 250ms ease-out;
+          -ms-transition: all 250ms ease-out;
+          -o-transition: all 250ms ease-out;
+          transition: all 250ms ease-out;
+        }
+        .portfolio-list-item .portfolio-tb .over {
+          background: rgba(0, 0, 0, .5);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          -webkit-transition: all 250ms ease-out;
+          -moz-transition: all 250ms ease-out;
+          -ms-transition: all 250ms ease-out;
+          -o-transition: all 250ms ease-out;
+          transition: all 250ms ease-out;
+        }
+        .portfolio-list-item:hover .portfolio-tb img {
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+        .portfolio-list-item:hover .portfolio-tb .over {
+          opacity: 1;
+        }
+        .portfolio-list-item .portfolio-tb .over .label {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          text-align: center;
+          color: #fff;
+          letter-spacing: .2rem;
+          font-size: 4rem;
+          font-weight: 100;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+          text-indent: -999em;
+          overflow: hidden;
+        }
+        .portfolio-list-item .portfolio-tb .over .label:before {
+          width: 2px;
+          background: #fff;
+          height: 2.75rem;
+          content:'';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%,-50%);
+          -moz-transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+          -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+        }
+        .portfolio-list-item .portfolio-tb .over .label:after {
+          height: 2px;
+          background: #fff;
+          width: 2.75rem;
+          content:'';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%,-50%);
+          -moz-transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+          -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+        }
+        .portfolio-list-item .portfolio-title {
+          font-size: 1.25rem;
+          padding:0;
+          font-family: 'NEXON Lv1 Gothic OTF';
+          color: black;
+        }
+        .page.in .portfolio-content-block  {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+          -moz-transform: translateY(0);
+          -ms-transform: translateY(0);
+          -o-transform: translateY(0);
+          transform: translateY(0);
+          -webkit-transition-delay: 400ms;
+          -moz-transition-delay: 400ms;
+          -ms-transition-delay: 400ms;
+          -o-transition-delay: 400ms;
+          transition-delay: 400ms;
+        }
+
+
+      /* pagination */
+        .pagination ul {
+            padding:  2.188rem 0;
+        }
+
+        .pagination ul li {
+            display: inline;
+            font-size:1.7rem;
+            text-align:center;
+            padding:0.875rem;
+            cursor: pointer;
+            color:#bebebe;
+            font-weight: bold;
+        }
+
+        .pagination ul li:first-child{
+            padding:0.875rem 0rem;
+        }
+
+        .pagination ul li:last-child{
+            padding:0.875rem 0rem;
+        }
+
+        .no-mobile .pagination ul li:not(.active ):not(.cursor-n ):hover{
+            color:#46bebe;
+        }
+
+        .pagination ul li.active{
+            color: #333;
+        }
+
+        .pagination ul li.arrow-btn{
+            color: #bebebe;
+        }
+
+        .pagination ul li.cursor-n {
+            cursor: no-drop ;
+        }
+
+        .pagination {
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+
+        .pagination a {
+            color: #666666;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 .65rem;
+        }
+
+        .pagination a.current {
+            color: #46bebe;
+        }
+
+        .pagination {
+            margin-top: 1.875rem;
+        }
+
+        /* footer */
+         #footer{
+           border-top: 1px solid gray;
+           font-family: 'NEXON Lv1 Gothic OTF';
+           padding: 20px;
+         }
+         #footer .list-line{
+            font-size: 18px;
+            list-style-type: none;
+            text-align: center;
+            margin: 40px;
+         }
+          #footer .isnut-sns{
+           list-style-type: none;
+           text-align: right;
+         }
+         #footer .isnut-sns li{
+           display: inline;
+         }
     </style>
 
+    <script type="text/javascript">
+      function pagechange(pagenumber, name){
+        fetch('datapage_'+pagenumber+'.html').then(function(response){
+            response.text().then(function(text){
+              document.querySelector('article').innerHTML = text;
+            })
+        });
+        $("li").removeClass("active");
+        $(name).addClass("active");
+      }
+
+      function classchange(name){
+        $("a").removeClass("active_a");
+        $(name).addClass("active_a");
+      }
+
+      function pagination(departname){
+        switch (departname) {
+          case 1 :
+          document.getElementById("pagination_1").style.display ='';
+          document.getElementById("pagination_2").style.display ='none';
+          break;
+          case 11 :
+          document.getElementById("pagination_1").style.display ='none';
+          document.getElementById("pagination_2").style.display ='';
+          break;
+        }
+      }
+    </script>
+
   </head>
+
   <body>
-
-  <h1>WORK</h1>
-  <div class = "button_work">
-      <input type = "button" value = "영상제">
-      <input type = "button" value = "공모전">
-      <input type = "button" value = "자유영상">
-      <input type = "button" value = "과제">
-  </div>
-
-    <!-- <form id="search-form" action="" class="style-scope ytd-searchbox">
-      <div id="container" class="style-scope ytd-searchbox">
-        <div id="search-input" class="ytd-searchbox-spt" slot="search-input">
-          <div class="gstl_50 sbib_a" style="height: 24px;">
-            <div class="gsst_b sbib_c" id="gs_st50" dir="ltr" style="line-height: 24px;">
-            <a class="gsst_a" href="javascript:void(0)">
-              <span class="gsok_a gsst_e" id="gs_ok50">
-                <img src="" tia_field_name="search_query" tia_disable_swap="true" tia_property="youtube">
-              </span>
-            </a>
-          </div>
-          <div class="sbib_b" id="sb_ifc50" dir="ltr">
-            <input id="search" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="text" spellcheck="false" placeholder="검색" aria-label="검색" aria-haspopup="false" role="combobox" aria-autocomplete="list" class="gsfi ytd-searchbox" dir="ltr" style="border: none; padding: 0px; margin: 0px; height: auto; width: 100%; outline: none;">
-          </div>
-        </div>
+    <nav class="menu" style = "padding: 3%">
+      <div><a href="../main/main.html" class="menu_title">ISNUT</a></div>
+      <ul>
+        <li><a href="about.html" class="menu_list">ABOUT</a></li>
+        <li><a href="../work/work.html" class="menu_list">WORK</a></li>
+        <li><a href="../" class="menu_list">NEWS</a></li>
+        <li><a href="../people/people.html" class="menu_list">PEOPLE</a></li>
+      </ul>
+    </nav>
+    <div class="title-design">
+      <h1 class = title>WORK</h1>
+    </div>
+    <section class="work_page" style="margin-top: 5%;">
+      <div class = "top_button">
+          <ul>
+            <li><a href="index.html" class="active_a" onclick="classchange(this)">영상제</a></li>
+            <li><a href="award.html" onclick="classchange(this)">공모전</a></li>
+            <li><a href="video.html" onclick="classchange(this)">자유영상</a></li>
+            <li><a href="assign.html" onclick="classchange(this)">과제</a></li>
+          </ul>
       </div>
-        <div id="search-container" class="ytd-searchbox-spt" slot="search-container"></div>
-      </div>
-      <button id="search-icon-legacy" class="style-scope ytd-searchbox" aria-label="검색">
-        <yt-icon class="style-scope ytd-searchbox"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon">
-          <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" class="style-scope yt-icon"></path>
-          </g></svg><!--css-build:shady-->
-        <!-- </yt-icon>
-        <paper-tooltip prefix="" class="style-scope ytd-searchbox" role="tooltip" tabindex="-1" style="left: 403.9px; top: 57px;"><!--css-build:shady-->
-          <!-- <div id="tooltip" class="style-scope paper-tooltip hidden">
-            검색
-          </div>
-        </paper-tooltip>
-      </button>
-    </form>  -->
 
-    <div class = "portfolio-content-block-body">
-      <div class="portfolio-list">
-        <ul name = "list" style = "list-style-type : none;">
-          <li data-num="2634">
-            <a href="javascript:goPortfolioPage('portfolio','ko','2634', 'hq');">
-              <div class="portfolio-list-item">
-                <div class="portfolio-tb">
-                  <img src="20200703034157400.png" alt="포폴명">
-                  <div class="over">
-                    <span class="label">+</span>
-                  </div>
-                </div>
-                <h5 class="portfolio-title">누르면 영상을 볼 수 있다구 !</h5>
-              </div>
-            </a>
-          </li>
-          <li data-num="2634">
-            <a href="javascript:goPortfolioPage('portfolio','ko','2634', 'hq');">
-              <div class="portfolio-list-item">
-                <div class="portfolio-tb">
-                  <img src="20200703034157400.png" alt="포폴명">
-                  <div class="over">
-                    <span class="label">+</span>
-                  </div>
-                </div>
-                <h5 class="portfolio-title">누르면 영상을 볼 수 있다구 !</h5>
-              </div>
-            </a>
-          </li>
+      <article style="margin: 5%;">
+        <script>
+          fetch('datapage_1.html').then(function(response){
+              response.text().then(function(text){
+                document.querySelector('article').innerHTML = text;
+              })
+          });
+        </script>
+      </article>
+      <div class="pagination">
+        <ul>
+          <li pagenumber="0" class="arrow-btn cursor-n">
+          <i class="icon-page-left2"></i></li>
+
+          <ul id=pagination_1 style="display:'';">
+            <li pagenumber="0" class="arrow-btn cursor-n">pre</li>
+            <li pagenumber="1" class = "active" onclick = "pagechange(1, this);">1</li>
+            <li pagenumber="2" onclick = "pagechange(2, this);">2</li>
+            <li pagenumber="3" onclick = "pagechange(3, this);">3</li>
+            <li pagenumber="4" onclick = "pagechange(4, this);">4</li>
+            <li pagenumber="5" onclick = "pagechange(5, this);">5</li>
+            <li pagenumber="6" onclick = "pagechange(6, this);">6</li>
+            <li pagenumber="7" onclick = "pagechange(7, this);">7</li>
+            <li pagenumber="8" onclick = "pagechange(8, this);">8</li>
+            <li pagenumber="9" onclick = "pagechange(9, this);">9</li>
+            <li pagenumber="10" onclick = "pagechange(10, this);">10</li>
+            <li pagenumber="11" onclick="pagination(11);">next
+            </li>
+          </ul>
+
+          <ul id=pagination_2 style="display:none;">
+            <li pagenumber="10" onclick="pagination(1);">pre</li>
+            <li pagenumber="11" class = "active" onclick = "pagechange(11, this);">11</li>
+            <li pagenumber="12" onclick = "pagechange(12, this);">12</li>
+            <li pagenumber="13" onclick = "pagechange(13, this);">13</li>
+            <li pagenumber="14" onclick = "pagechange(14, this);">14</li>
+            <li pagenumber="15" onclick = "pagechange(15, this);">15</li>
+            <li pagenumber="16" onclick = "pagechange(16, this);">16</li>
+            <li pagenumber="17" onclick = "pagechange(17, this);">17</li>
+            <li pagenumber="18" onclick = "pagechange(18, this);">18</li>
+            <li pagenumber="19" onclick = "pagechange(19, this);">19</li>
+            <li pagenumber="20" onclick = "pagechange(20, this);">20</li>
+            <li pagenumber="21" class="arrow-btn cursor-n" onclick="pagination(21);">next</li>
+          </ul>
+
+          <li pagenumber="116" class="arrow-btn">
+          <i class="icon-page-right2"></i></li>
         </ul>
       </div>
-    </div>
-
-    <div id="footer" class="footer">
-      <div class="footer-area">
-
-          <ul class="isnut-sns">
-            <li><a href="https://www.facebook.com/snut.i.7/about" target="blank"> <img alt="facebook" src="fb.png" style="width:5%;"></a></li>
-            <li><a href="https://cafe.naver.com/isnut" target="blank"> <img alt="Naver" src="blog.png" style="width:5%;"></a></li>
-            <li><a href="http://isnut.cyworld.com" target="blank"> <img alt="Nate" src="nate.png" style="width:5%;"></a></li>
-            <li><a href="https://www.youtube.com/" target="blank"> <img alt="Youtube" src="youtube.png" style="width:5%;"></a></li>
-          </ul>
-
-          <ul class="list-line">
-            <li>E-mail : 국장/부국장 메일</li>
-            <li>Site by 김지원 유은영 정해정</li>
-          </ul>
-
-          <!-- <a href="#" class="page-top" style="display: block;">Top</a> -->
-
+    </section>
+    <footer>
+      <div id="footer" class="footer">
+        <div class="footer-area">
+            <ul class="isnut-sns">
+              <li><a href="https://www.facebook.com/snut.i.7/about" target="blank"> <img alt="facebook" src="fb.png" style="width:5%;"></a></li>
+              <li><a href="https://cafe.naver.com/isnut" target="blank"> <img alt="Naver" src="blog.png" style="width:5%;"></a></li>
+              <li><a href="http://isnut.cyworld.com" target="blank"> <img alt="Nate" src="nate.png" style="width:5%;"></a></li>
+              <li><a href="https://www.youtube.com/" target="blank"> <img alt="Youtube" src="youtube.png" style="width:5%;"></a></li>
+            </ul>
+            <ul class="list-line">
+              <li>E-mail : 국장/부국장 메일</li>
+              <li>Site by 김지원 유은영 정해정</li>
+            </ul>
+            <!-- <a href="#" class="page-top" style="display: block;">Top</a> -->
+        </div>
       </div>
-    </div>
-
+    </footer>
   </body>
 </html>
