@@ -1,0 +1,46 @@
+/*activity*/
+.activity{
+  width: 94%;
+  height: 1750px;
+  position: relative;
+}
+.wrap_scroll p{
+  font-family: 'NIXGONM-Vb',sans-serif ;
+  font-size: 25px;
+  margin: 150px 50px 0 0;
+  position: relative;
+  grid-area: e;
+}
+.plan, .film, .edit, .play{
+  margin: 2%;
+  position: relative;
+  display: grid;
+  grid-template-areas: " a b c"
+                       " d e f";
+}
+.film, .play{
+  justify-content: flex-end;
+}
+.plan img, .edit img{
+  grid-area: a;
+}
+.film img, .play img{
+  grid-area: c;
+  margin-left: 350px;
+}
+#act_img1, #act_img2, #act_img3, #act_img4{
+  width: 600px;
+  height: auto;
+  margin: 10px 0 10px 0;
+}
+#act_img1, #act_img3{
+  grid-area: d;
+}
+#act_img2, #act_img4{
+  grid-area: f;
+}
+.plan img, .edit img, .film img, .play img, .wrap_scroll p{
+  position: relative;
+  opacity: 0;
+  top: 10px;
+}
