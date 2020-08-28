@@ -161,32 +161,28 @@ iframe{
   margin-left: 28%;
 }
 .text_content{
+  position: relative;
+  margin-left: 28%;
   margin-bottom: 30px;
+  overflow-x: hidden;
 }
-.text_content h3{
+#up_title{
   font-family: 'GmarketSansLight';
   font-size: 28px;
   position: relative;
   top: 20px;
-  margin-left: 28%;
-  overflow-x: hidden;
 }
-.text_content p{
+#up_people{
   font-family: 'GmarketSansLight';
   font-size: 15px;
   position: relative;
   top: 20px;
-  margin-left: 28%;
-  margin-right: 28%;
-  overflow-x: hidden;
   color: #787878;
 }
-.text_content span{
+#up_intent{
   font-family: 'GmarketSansLight';
   font-size: 20px;
   position: relative;
   top: 20px;
-  margin: 0 28% 30px 28%;
-  overflow-x: hidden;
   color: #787878;
 }
