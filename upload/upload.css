@@ -171,6 +171,7 @@ iframe{
   font-size: 28px;
   position: relative;
   top: 20px;
+  overflow-x: hidden;
 }
 #up_people{
   font-family: 'GmarketSansLight';
@@ -178,6 +179,7 @@ iframe{
   position: relative;
   top: 20px;
   color: #787878;
+  overflow-x: hidden;
 }
 #up_intent{
   font-family: 'GmarketSansLight';
@@ -185,4 +187,9 @@ iframe{
   position: relative;
   top: 20px;
   color: #787878;
+  overflow-x: hidden;
 }
+.comment{
+  overflow-x: hidden;
+}
+
