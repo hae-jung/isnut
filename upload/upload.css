@@ -194,4 +194,6 @@ iframe{
 }
 #disqus_thread{
   overflow-x: hidden;
+  position: relative;
+  left: -200px;
 }
