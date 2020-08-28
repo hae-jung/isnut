@@ -189,9 +189,6 @@ iframe{
   color: #787878;
   overflow-x: hidden;
 }
-.comment{
-  overflow-x: hidden;
-}
 #disqus_thread{
   position: relative;
   left: -1000px;
