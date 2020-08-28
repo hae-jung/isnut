@@ -192,6 +192,6 @@ iframe{
 .comment{
   overflow-x: hidden;
 }
-#dsq_app5472{
-  margin-left: 30px;
+#disqus_thread{
+  overflow-x: hidden;
 }
