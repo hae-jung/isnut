@@ -160,6 +160,9 @@ iframe{
   position: relative;
   margin-left: 28%;
 }
+.content{
+  margin-bottom: 30px;
+}
 .content h3{
   font-family: 'GmarketSansLight';
   font-size: 28px;
@@ -186,7 +189,4 @@ iframe{
   margin: 0 28% 30px 28%;
   overflow-x: hidden;
   color: #787878;
-}
-.comment{
-  margin-top : 30px;
 }
